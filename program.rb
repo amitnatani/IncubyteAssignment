@@ -1,7 +1,7 @@
 # Method to add numbers provided in given string
 class Program
   def add(numbers)
-    return 0 if numbers.empty?
+    return 0 if numbers.nil? || numbers.empty?
     negatives = []
     numbers, delimeter = find_delimeter(numbers)
     sum = 0

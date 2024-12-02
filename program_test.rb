@@ -9,11 +9,17 @@ class AddTest < Test::Unit::TestCase
   def test_add
     result = @program.add('')
     assert_equal 0, result
+
+    result = @program.add(nil)
+    assert_equal 0, result
   end
 
   def test_add_with_comma_delimeter
     result = @program.add('1,2,3')
     assert_equal 6, result
+
+    result = @program.add('1')
+    assert_equal 1, result
   end
 
   def test_add_with_comma_delimeter_and_spaces
